@@ -1,0 +1,17 @@
+<div class="container">
+  <h3>Simple Angular i18n</h3>
+  <h5><i>Translation through pipes</i></h5>
+  <div class="btn-group" style="text-align{center}">
+    <button *ngFor="let lang of i18nService.supportedLangs"
+            (click)="selectLang(lang.value)" class="btn btn-default"
+            [class.btn-primary]="isCurrentLang(lang.value)">{{ lang.label }}
+    </button>
+  </div>
+  <div style="margin-top: 20px">
+    <ul>
+      <li>{{ 'welcome' | i18n }}</li>
+      <li>{{ 'logout' | i18n }}</li>
+      <li>...</li>
+    </ul>
+  </div>
+</div>
